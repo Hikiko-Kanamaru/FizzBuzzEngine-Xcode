@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2373533E239749F600D4F7F7 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2373533D239749F600D4F7F7 /* main.swift */; };
+		238A341E239C8F7F0060C6CE /* FizzBuzzEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238A341D239C8F7F0060C6CE /* FizzBuzzEngine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +25,8 @@
 
 /* Begin PBXFileReference section */
 		2373533A239749F500D4F7F7 /* FizzBuzz */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FizzBuzz; sourceTree = BUILT_PRODUCTS_DIR; };
-		2373533D239749F600D4F7F7 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		2373533D239749F600D4F7F7 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; usesTabs = 0; };
+		238A341D239C8F7F0060C6CE /* FizzBuzzEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FizzBuzzEngine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				2373533D239749F600D4F7F7 /* main.swift */,
+				238A341D239C8F7F0060C6CE /* FizzBuzzEngine.swift */,
 			);
 			path = FizzBuzz;
 			sourceTree = "<group>";
@@ -121,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2373533E239749F600D4F7F7 /* main.swift in Sources */,
+				238A341E239C8F7F0060C6CE /* FizzBuzzEngine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
