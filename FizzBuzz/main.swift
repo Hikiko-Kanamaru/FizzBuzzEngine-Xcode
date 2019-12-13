@@ -47,13 +47,31 @@ if i3Amari != 0 && i5Amari != 0 {
 print(i)
 }
 
-//var は変数を作ることができる。
+print("print.swift")
+//var は変数(値を変えらる箱)を作ることができる。　""で囲む事で、14（数字）を文字列と認識させている。
 var kotae = "14"
 //　\()で囲う事でプログラムとして、処理することができる
 print("答えは,\(kotae)です")
 //変数は、中身を何度も入れ替えることができる。
 kotae = "FizzBuzz"
 print("答えは,\(kotae)です")
+
+print("pritnt2.swift")
+kotae = "16"
+//terminator:は,末尾に追加する文字列を指定している。\nは、改行コード　テキスト入力のエンターキーと同じ
+print("答えは,\(kotae)です",separator: "",terminator: "よね知ってます。\n")
+kotae = "17"
+//swiftのprintは、末尾に改行(\n)が自動で足されるので,改行させないならterminator:に""を入れる。自動で入る改行コードが(\n)上書きされて、改行されなくなる
+print("答えは\(kotae)です",separator: "",terminator: "。改行しません。")
+print("このprintは,改行されずに、前のprint続いて表示されます")
+//連続して出力するためには,末尾に,を足す。改行コードを入力しない。
+kotae = "1"
+print(kotae,separator: "",terminator: ",")
+kotae = "2"
+print(kotae, separator: "", terminator: ",")
+kotae = "Fizz"
+print(kotae, separator: "", terminator: ",")
+
 //*/ コードを無効化の終了コードです
 // MARK: FizzBuzz基礎コード
 print("ここより下がFizzBuzz基本系のまとめ")
@@ -64,6 +82,7 @@ for i in 1...15 {
     //回答用文字列を、"文字列を出力する"から持ってくる
     var kotae = ""
     
+    //場合分け４種類
     let i3Amari = i % 3
     if i3Amari == 0 {
         //print("Buzz") コードを無効化して、kotaeに文字列を入れる
@@ -84,10 +103,11 @@ for i in 1...15 {
         //iは数字(Int)なので,文字列Stringに変更している
         kotae = String(i)
     }
-    //print("答えは,\(kotae)です")
+    
+    //文字列の出力
     // print(suuji, separator: "", terminator: ",")
     //ここで答えが出力されている.
-    print(kotae, separator: "", terminator: ",")
+    print(kotae, terminator: ",")
 }
 
 
