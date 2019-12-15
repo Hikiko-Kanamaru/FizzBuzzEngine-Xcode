@@ -50,6 +50,27 @@ func FizzBuzzEngine(nyuryoku : Int) {
     //}
 }
 
+// func　関数名(仮引数:型) -> 返す値{プログラム}
+func FizzBuzzEngineReturn(nyuryoku : Int) -> String {
+//　変数宣言 変数名 :型 = 初期値　 返す値の型(String)と同じなので、答えを入れておくために利用します.
+    var kotae:String = ""
+    //FizzBuzzEngineの場合分け部分
+    if nyuryoku % 3 == 0{
+        kotae = "Fizz"
+    }
+    if (nyuryoku % 5) == 0 {
+        kotae = "Buzz"
+    }
+    if nyuryoku % 3 == 0 && nyuryoku % 5 == 0 {
+        kotae = "FizzBuzz"
+    }
+    if kotae == "" {
+        kotae = String(nyuryoku)
+    }
+    // return 返す値
+    return kotae
+}
+
 
 //FizzBuzz配列用
 /*

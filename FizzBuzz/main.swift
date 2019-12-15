@@ -129,15 +129,19 @@ FizzBuzzEngine(nyuryoku: 5)
 FizzBuzzEngine(nyuryoku: 15)
 FizzBuzzEngine(nyuryoku: 2501)
 
+print("FizzBuzzEngineReturnが実行されています")
+var EngineReturn = FizzBuzzEngineReturn(nyuryoku: 15)
+print(EngineReturn)
+EngineReturn = FizzBuzzEngineReturn(nyuryoku: 404)
+print("\(EngineReturn)を,受け取っています。")
+//print内で直接実行することもできる。
+print(FizzBuzzEngineReturn(nyuryoku: 35))
+//if文の条件式に使うこともできる
+if FizzBuzzEngineReturn(nyuryoku: 45) == "FizzBuzz"{
+    print("45は,FizzBuzzだよ")
+}
 
-// MARK: FizzBuzz配列
-/*
- ##FizzBuzz配列
- 今回は、`答え`をプログラムで使いやすいように`配列`にします。
- 配列は`[]`で囲う事で表現できます。
 
- >[1,2,Fizz,4,Buzz,6,7,8,Fizz,Buzz,11,Fizz,13,14,FizzBuzz]
- */
 
 // MARK: FizzBuzzモナドi/0
 let FizzBuzz = {(t:Int) -> String in
@@ -153,4 +157,3 @@ let FizzBuzz = {(t:Int) -> String in
     }
     return kotae
 }
-
