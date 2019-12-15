@@ -114,12 +114,21 @@ for i in 1...15 {
 
 
 // MARK: - FizzBuzzEngine
-
+print("FizzBUzzEngineのコード実行エリア")
 // MARK: 呼び出し(オブジェクト指向)
-print("")
-print("オブジェクト思考をわかりやすく説明する場所")
-let FizzBuzzEngine1  = FizzBuzzEngine(2)
-print(FizzBuzzEngine1)
+print("BaiBaiを実行しています")
+BaiBai(hikisu: 2)
+BaiBai(hikisu: 15)
+BaiBai(hikisu: 32)
+
+
+print("FizzBuzzEngineが実行されています。")
+FizzBuzzEngine(nyuryoku: 1)
+FizzBuzzEngine(nyuryoku: 3)
+FizzBuzzEngine(nyuryoku: 5)
+FizzBuzzEngine(nyuryoku: 15)
+FizzBuzzEngine(nyuryoku: 2501)
+
 
 // MARK: FizzBuzz配列
 /*
