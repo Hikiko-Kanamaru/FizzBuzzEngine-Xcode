@@ -47,7 +47,7 @@ if i3Amari != 0 && i5Amari != 0 {
 print(i)
 }
 
-print("print.swift")
+print("print.swiftが実行されています")
 //var は変数(値を変えらる箱)を作ることができる。　""で囲む事で、14（数字）を文字列と認識させている。
 var kotae = "14"
 //　\()で囲う事でプログラムとして、処理することができる
@@ -56,7 +56,7 @@ print("答えは,\(kotae)です")
 kotae = "FizzBuzz"
 print("答えは,\(kotae)です")
 
-print("pritnt2.swift")
+print("pritnt2.swiftが実行されています。")
 kotae = "16"
 //terminator:は,末尾に追加する文字列を指定している。\nは、改行コード　テキスト入力のエンターキーと同じ
 print("答えは,\(kotae)です",separator: "",terminator: "よね知ってます。\n")
@@ -73,8 +73,9 @@ kotae = "Fizz"
 print(kotae, separator: "", terminator: ",")
 
 //*/ コードを無効化の終了コードです
-// MARK: FizzBuzz基礎コード
-print("ここより下がFizzBuzz基本系のまとめ")
+// MARK: -  FizzBuzz基礎コード
+print()
+print("FizzBuzz基本系のまとめ")
 
 //for in の中に,"場合分け"と"文字列を出力するをコピーする"
 for i in 1...15 {
@@ -141,10 +142,50 @@ if FizzBuzzEngineReturn(nyuryoku: 45) == "FizzBuzz"{
     print("45は,FizzBuzzだよ")
 }
 
+// MARK: - FizzBuzzTest
+
+print("yamakawa.swiftが実行されています")
+print(yama(uketoru: 6))
+let kekka = kawa(kansuu: yama(uketoru:))
+print("結果は,\(kekka)です")
+
+print("Bool.swiftが実行されています")
+//真理値の宣言
+var singi:Bool = true
+//if文で直接判定できる
+if singi {
+    print("trueです。実行されます。")
+    //else文は、if文が実行されなかったときに実行される。
+}else {
+    print("falseです。実行されません。")
+}
+//中身を反転させる
+singi = false
+print("boolを反転させました。もう一度同じコードを実行します。")
+if singi == true {
+    print("trueです。実行されます。")
+}else {
+    print("falseです。実行されません。")
+}
+print("現在singiに入っているのは\(singi)です。")
+
+//FizzBuzzTestを呼び出して、試験を受ける関数を渡しています。関数を与えるとき、引数に、値を与える必要性はありません。呼び出したままでOK
+var sikenkekka = FizzBuzzTest(sikenFunc: FizzBuzzEngineReturn(nyuryoku:))
+print("試験結果は\(sikenkekka)でした。")
+
+//数字を受け取って文字列に変更するだけの間違ったFizzBuzz
+func dameFizzBuzz(ukeru:Int) -> String {
+    //String()は、文字列を作り出してくれる。数字(Int)を入れると、文字列に変更してくれる。
+    return String(ukeru)
+}
+sikenkekka = FizzBuzzTest(sikenFunc:dameFizzBuzz(ukeru:))
+print("試験結果は\(sikenkekka)でした。")
 
 
-// MARK: FizzBuzzモナドi/0
-let FizzBuzz = {(t:Int) -> String in
+// MARK: - FizzBuzzモナドi/0
+
+//pritn("FizzBuzzモナドが実行されています")
+let FizzBuzzMonadio = {(t:Int) -> String in
     var kotae:String = ""
     if t % 3 == 0 {
         kotae.append("Fizz")
@@ -157,3 +198,17 @@ let FizzBuzz = {(t:Int) -> String in
     }
     return kotae
 }
+
+//MARK: - FizzBuzz再帰
+//print("FizzBuzz再帰が実行されています")
+func FizzBuzzRecursion(kaisi n:Int,kotae t:inout [String]) {
+    let ikkai = FizzBuzzMonadio(n)
+    t.append(ikkai)
+    if ikkai != "FizzBuzz"{
+        FizzBuzzRecursion(kaisi: n + 1, kotae: &t)
+    }
+}
+
+var ukekotae:[String] = []
+FizzBuzzRecursion(kaisi: 16, kotae: &ukekotae)
+print(ukekotae)
