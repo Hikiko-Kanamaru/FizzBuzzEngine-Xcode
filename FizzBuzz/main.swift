@@ -182,6 +182,8 @@ sikenkekka = FizzBuzzTest(sikenFunc:dameFizzBuzz(ukeru:))
 print("試験結果は\(sikenkekka)でした。")
 
 
+// FIXME: - 現在製造中のコード
+
 // MARK: - FizzBuzzモナドi/0
 
 //pritn("FizzBuzzモナドが実行されています")
