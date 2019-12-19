@@ -184,6 +184,11 @@ print("試験結果は\(sikenkekka)でした。")
 
 // FIXME: - 現在製造中のコード
 
+//FizzBuzzTestTimer
+print("FizzBuzzTestTimerが実行中")
+let jikan = FizzBuzzTestTimer(kaitou: FizzBuzzEngineReturn(nyuryoku:))
+print("\(jikan)秒かかりました。")
+
 // MARK: - FizzBuzzモナドi/0
 
 //pritn("FizzBuzzモナドが実行されています")

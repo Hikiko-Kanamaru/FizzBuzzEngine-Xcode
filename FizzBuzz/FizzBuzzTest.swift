@@ -63,3 +63,22 @@ func FizzBuzzTest(sikenFunc : (Int) -> String ) -> Bool {
     //return の後に書かれた変数が返値になる。　ここでは、変数の真理値(Bool)が返る
     return sougouKekka
 }
+
+
+
+//FizzBuzzTestTimer
+func FizzBuzzTestTimer(kaitou : (Int) -> String ) -> TimeInterval {
+    // 計測開始
+        let kaisi = Date()
+    //10万回実行する
+    for i in 1...100000{
+        //返値は利用しないので`_`で無名を指定
+        let _ = kaitou(i)
+    }
+    //終了時間を計測する
+    let owari = Date()
+    //かかった時間を計測する。終了時間の時間から、呼び出すのを間違えない様に。なぜなら、Dateは、時刻を数量にしている。timeIntervalSinceでは、引き算をしているだけなので、小さいほう(開始時間)から、大きいほう(終了時間)を引くとマイナスになってしまうため、終了時間の方から呼び出す
+    let jikann = owari.timeIntervalSince(kaisi)
+    print(jikann)
+ return jikann
+}
