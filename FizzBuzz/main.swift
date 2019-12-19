@@ -187,8 +187,10 @@ print("試験結果は\(sikenkekka)でした。")
 //FizzBuzzTestTimer
 print("FizzBuzzTestTimerが実行中")
 let jikan = FizzBuzzTestTimer(kaitou: FizzBuzzEngineReturn(nyuryoku:))
-print("\(jikan)秒かかりました。")
+//print("\(jikan)秒かかりました。")
 
+let jikan2 = FizzBuzzTestTimer(kaitou: dameFizzBuzz(ukeru:))
+//print("\(jikan2)秒かかりました")
 // MARK: - FizzBuzzモナドi/0
 
 //pritn("FizzBuzzモナドが実行されています")

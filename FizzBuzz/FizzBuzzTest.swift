@@ -67,9 +67,10 @@ func FizzBuzzTest(sikenFunc : (Int) -> String ) -> Bool {
 
 
 //FizzBuzzTestTimer
+//実行時間を計測してくれる。TimeIntervalは時間が、実数(小数点を含む数。Double)で入っている。
 func FizzBuzzTestTimer(kaitou : (Int) -> String ) -> TimeInterval {
     // 計測開始
-        let kaisi = Date()
+    let kaisi = Date()
     //10万回実行する
     for i in 1...100000{
         //返値は利用しないので`_`で無名を指定
@@ -79,6 +80,16 @@ func FizzBuzzTestTimer(kaitou : (Int) -> String ) -> TimeInterval {
     let owari = Date()
     //かかった時間を計測する。終了時間の時間から、呼び出すのを間違えない様に。なぜなら、Dateは、時刻を数量にしている。timeIntervalSinceでは、引き算をしているだけなので、小さいほう(開始時間)から、大きいほう(終了時間)を引くとマイナスになってしまうため、終了時間の方から呼び出す
     let jikann = owari.timeIntervalSince(kaisi)
-    print(jikann)
- return jikann
+    print("実行にかかった時間は\(jikann)秒です。")
+    
+    /*
+     //date表示が長く読みづらいので短く調整するコード。
+     let formatter = DateFormatter()
+     formatter.dateFormat = "ss.SSSS"
+     let henkann = Date(timeIntervalSinceReferenceDate: jikann)
+     let hyoujiyouKotae = formatter.string(from: henkann)
+     print(hyoujiyouKotae)
+     */
+    
+    return jikann
 }
